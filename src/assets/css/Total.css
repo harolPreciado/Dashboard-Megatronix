@@ -1,8 +1,8 @@
-.product-contain{
+.total-contain{
     display: flex;
 }
 
-.products-total{
+.total-total{
     display: inline-block;
     width: 350px;
     height:max-content;
@@ -23,12 +23,20 @@
     background-color: #EDB518;
 }
 
+.categories{
+    position: relative;
+    display: inline-block;
+    width: 500px;
+    height:max-content;
+    margin: 10px 0px 0px 10px;
+}
+
 .total{
     font-size: 40px;
     text-align: center;
 }
 
-.product-boton-avance{
+.boton-avance{
     display: block;
     width: 20px;
     height: 20px;
@@ -39,7 +47,7 @@
     background-color: green;
 }
 
-.product-boton-retroceso{
+.boton-retroceso{
     display: block;
     width: 20px;
     height: 20px;

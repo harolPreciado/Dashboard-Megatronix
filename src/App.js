@@ -2,9 +2,11 @@ import './assets/css/App.css'
 import { Route, Routes } from 'react-router-dom'
 
 import Header from './components/Header'
-import SideLeft from './components/products/SideLeft';
+import SideLeft from './components/SideLeft';
 import Home from './components/Home'
 import Products from './components/products/Products'
+import Users from './components/users/Users'
+import Categories from './components/categories/Categories'
 import Error404 from './components/Error404'
 
 function App() {
@@ -16,8 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/users" element={<Products />} />
-          <Route path="/categories" element={<Products />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/categories" element={<Categories />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>

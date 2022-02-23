@@ -14,3 +14,10 @@ article{
     line-height: 20px;
     margin-left: 10px;
 }
+
+.Category{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #EDB518;
+    margin-bottom: 10px;
+}
