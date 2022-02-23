@@ -12,7 +12,7 @@ body {
 
 .container{
     display: flex;
-    width: max-content;
+    width: 100vw;
     height: max-content;
     margin: 0px;
 }

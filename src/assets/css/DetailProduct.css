@@ -1,0 +1,16 @@
+.keyText{
+    font-weight:bold
+}
+
+.img-product{
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-top:10px;
+    margin-left: 80px;
+    border-radius: 10px;
+}
+article{
+    line-height: 20px;
+    margin-left: 10px;
+}

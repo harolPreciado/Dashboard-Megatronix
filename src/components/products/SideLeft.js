@@ -8,17 +8,9 @@ import { Link } from 'react-router-dom'
 function SideLeft() {
     return(
         <div className="side-left">
-            <p>
-            <Link to="/products" exact="true">Productos</Link>
-            </p><br/>
-            
-            <p>
-            <Link to="/users" exact="true">Usuarios</Link>
-            </p><br/>
-
-            <p>
-            <Link to="/categories" exact="true">Categorias</Link>
-            </p>
+            <Link to="/products" exact="true"><p>Productos</p></Link><br/>
+            <Link to="/users" exact="true"><p>Usuarios</p></Link><br/>
+            <Link to="/categories" exact="true"><p>Categorias</p></Link>
         </div>
     )
 }
