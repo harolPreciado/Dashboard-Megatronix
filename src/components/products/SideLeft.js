@@ -1,12 +1,26 @@
+import React from 'react'
 
-function sideLeft() {
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../../assets/css/SideLeft.css'
+
+import { Link } from 'react-router-dom'
+
+function SideLeft() {
     return(
         <div className="side-left">
-            <p>Total Productos</p><br/>
-            <p>Total Usuarios</p><br/>
-            <p>Total Categorias</p>
+            <p>
+            <Link to="/products" exact="true">Productos</Link>
+            </p><br/>
+            
+            <p>
+            <Link to="/users" exact="true">Usuarios</Link>
+            </p><br/>
+
+            <p>
+            <Link to="/categories" exact="true">Categorias</Link>
+            </p>
         </div>
     )
 }
 
-export default sideLeft;
+export default SideLeft;

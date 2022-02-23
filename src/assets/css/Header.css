@@ -1,0 +1,26 @@
+.App-logo{
+    margin: 10px 0 0 10px;
+    width: 300px;
+}
+
+.App-header{
+    background-color: #161D6F;
+    width: 100vw;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+}
+
+.Title-header{
+    width: max-content;
+    margin: auto;
+    padding-left: 50px;
+    font-weight: 800;
+    font-size: 70px;
+    vertical-align:bottom;
+    color: #EDB518;
+    letter-spacing: -6px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
