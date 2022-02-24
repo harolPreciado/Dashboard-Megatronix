@@ -99,7 +99,7 @@ function Products() {
                                 <td className="idText">{product.id}</td>
                                 <td>{product.name}</td>
                                 <td>{product.description}</td>
-                                <td><a>{product.detail}</a></td>
+                                <td><a href={product.detail}>{product.detail}</a></td>
                             </tr>
                         )
                     })
