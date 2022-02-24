@@ -1,7 +1,7 @@
 .total-contain{
-    display: flex;
+    margin-left: 30px;
+    width: 950px;
 }
-
 .total-total{
     display: inline-block;
     width: 350px;

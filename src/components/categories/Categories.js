@@ -47,7 +47,7 @@ function Products() {
             </div>
             <div className="categories">
             {
-                    categoria.map((categoria, i) => {
+                    categoria.map((categoria) => {
                         return (
                             <DetailCategory nombre={categoria.Category} id={categoria.idCategory} cantidad={categoria.Count}/>
                         )

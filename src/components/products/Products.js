@@ -1,15 +1,16 @@
 import '../../assets/css/Total.css'
+import '../../assets/css/Table.css'
 
 import { useState, useEffect } from 'react';
-import DetailProduct from '../products/DetailProduct';
+import DetailProduct from '../products/DetailProduct'
 
 function Products() {
     const [producto, setProducto] = useState([]);
+    const [productos, setProductos] = useState([]);
     const [index, setIndex] = useState(1);
     const [total, setTotal] = useState();
 
     useEffect(() => {
-        console.log("Se montó el componente");
         fetch(`https://megatronix-6.herokuapp.com/api/products/${index}`)
             .then(response => response.json())
             .then(data => {
@@ -52,12 +53,22 @@ function Products() {
     }
 
     useEffect(() => {
-        console.log("Se montó el componente");
         fetch('https://megatronix-6.herokuapp.com/api/products')
             .then(response => response.json())
             .then(data => {
                 setTotal(
                     data.countProducts
+                )
+            })
+            .catch(error => console.error(error))
+    }, []);
+
+    useEffect(() => {
+        fetch('https://megatronix-6.herokuapp.com/api/products')
+            .then(response => response.json())
+            .then(data => {
+                setProductos(
+                    data.data
                 )
             })
             .catch(error => console.error(error))
@@ -74,8 +85,27 @@ function Products() {
                 <button className="boton-avance" onClick={incrementar}></button>
                 <button className="boton-retroceso" onClick={decrementar}></button>
             </div>
+            <table class="tabla">
+                <tr>
+                    <th className="id">ID</th>
+                    <th className="name">NOMBRE</th>
+                    <th className="descr">DESCRIPCION</th>
+                    <th className="deta">DETALLE EN SITIO</th>
+                </tr>
+                {
+                    productos.map((product, i) => {
+                        return (
+                            <tr key={i}>
+                                <td className="idText">{product.id}</td>
+                                <td>{product.name}</td>
+                                <td>{product.description}</td>
+                                <td><a>{product.detail}</a></td>
+                            </tr>
+                        )
+                    })
+                }
 
-
+            </table>
         </div>
     )
 }

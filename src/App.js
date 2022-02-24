@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Products from './components/products/Products'
 import Users from './components/users/Users'
 import Categories from './components/categories/Categories'
+import Ends from './components/ends/Ends'
 import Error404 from './components/Error404'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/users" element={<Users />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/ends" element={<Ends />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
