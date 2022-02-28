@@ -7,7 +7,7 @@ import DetailProduct from '../products/DetailProduct'
 function Products() {
     const [producto, setProducto] = useState([]);
     const [productos, setProductos] = useState([]);
-    const [index, setIndex] = useState(1);
+    const [index, setIndex] = useState(103);
     const [total, setTotal] = useState();
 
     useEffect(() => {
