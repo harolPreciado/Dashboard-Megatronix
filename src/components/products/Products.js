@@ -82,8 +82,8 @@ function Products() {
             </div>
             <div className="product">
                 <DetailProduct nombre={producto.name} id={producto.id} descripcion={producto.description} detalle={producto.detail} imagen={producto.image} />
-                <button className="boton-avance" onClick={incrementar}></button>
-                <button className="boton-retroceso" onClick={decrementar}></button>
+                <button className="boton-avance" onClick={incrementar}> Next </button>
+                <button className="boton-retroceso" onClick={decrementar}> Back </button>
             </div>
             <table class="tabla">
                 <tr>
