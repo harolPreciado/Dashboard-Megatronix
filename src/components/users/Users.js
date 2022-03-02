@@ -5,7 +5,7 @@ import DetailUser from './DetailUser';
 
 function Users() {
     const [usuario, setUsuario] = useState([]);
-    const [index, setIndex] = useState(1);
+    const [index, setIndex] = useState(314);
     const [total, setTotal] = useState();
 
     useEffect(() => {
