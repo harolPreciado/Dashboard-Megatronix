@@ -1,10 +1,12 @@
 import '../../assets/css/Total.css'
+import '../../assets/css/Table.css'
 
 import { useState, useEffect } from 'react';
 import DetailUser from './DetailUser';
 
 function Users() {
     const [usuario, setUsuario] = useState([]);
+    const [usuarios,setUsuarios] = useState([]);
     const [index, setIndex] = useState(314);
     const [total, setTotal] = useState();
 
@@ -63,6 +65,17 @@ function Users() {
             .catch(error => console.error(error))
     }, []);
 
+    useEffect(() => {
+        fetch('https://megatronix-6.herokuapp.com/api/users')
+            .then(response => response.json())
+            .then(data => {
+                setUsuarios(
+                    data.users
+                )
+            })
+            .catch(error => console.error(error))
+    }, []);
+
     return (
         <div className="total-contain">
             <div className="total-total">
@@ -74,7 +87,25 @@ function Users() {
                 <button className="boton-avance" onClick={incrementar}></button>
                 <button className="boton-retroceso" onClick={decrementar}></button>
             </div>
+            <table class="tabla">
+                <tr>
+                    <th className="id">ID</th>
+                    <th className="name">NOMBRE</th>
+                    <th className="descr">email</th>
+                </tr>
+                {
+                    usuarios.map((user, i) => {
+                        return (
+                            <tr key={i}>
+                                <td className="idText">{user.id}</td>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                            </tr>
+                        )
+                    })
+                }
 
+            </table>
 
         </div>
     )
