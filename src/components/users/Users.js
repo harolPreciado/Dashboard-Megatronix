@@ -84,8 +84,8 @@ function Users() {
             </div>
             <div className="product">
                 <DetailUser nombre={usuario.name} id={usuario.id} email={usuario.email} imagen={usuario.image} />
-                <button className="boton-avance" onClick={incrementar}> Next </button>
-                <button className="boton-retroceso" onClick={decrementar}>  Back </button>
+                <button className="boton-avance" onClick={incrementar}>{'>'} </button>
+                <button className="boton-retroceso" onClick={decrementar}>{'<'}</button>
             </div>
             <table class="tabla">
                 <tr>

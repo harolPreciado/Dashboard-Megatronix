@@ -1,12 +1,12 @@
 .home-container {
     display: block;
-    width: 350px;
-    height:max-content;
+    width: 75%;
+    height:350px;
     margin: 10px 0px 0px 10px;
     padding: 10px;
     box-shadow: 0px 0px 5px 5px #00040759;
     background-color: rgba(255, 255, 255, 0.8);
-    line-height: 30px;
+    line-height: 40px;
 }
 
 h2{
